@@ -4,17 +4,37 @@
   box-sizing: border-box;
 }
 
+@mixin dark-theme {
+  --primary-color: #202020;
+  --secondary-color: #e6d1fc;
+  --tertiary-color: #a052dd;
+  --color: #fff;
+}
+
+@mixin light-theme {
+  --primary-color: #f5f5f5;
+  --secondary-color: #a052dd;
+  --tertiary-color: #e6d1fc;
+  --color: #000;
+}
+
 body {
   margin: 0;
   padding: 0;
 }
 
-.light {
-  background-color: white;
-  color: black;
-}
+:root {
+  .light {
+    @include light-theme;
 
-.dark {
-  background-color: black;
-  color: white;
+    background-color: #fff;
+    color: black;
+  }
+
+  .dark {
+    @include dark-theme;
+
+    background-color: #050505;
+    color: white;
+  }
 }

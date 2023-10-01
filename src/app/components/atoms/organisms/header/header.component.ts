@@ -7,7 +7,12 @@ import { ThemeSwitchComponent } from '../../theme-switch/theme-switch.component'
   selector: 'app-header',
   standalone: true,
   imports: [CommonModule, LogoComponent, ThemeSwitchComponent],
-  templateUrl: './header.component.html',
+  template: `
+    <div class="header">
+      <app-logo></app-logo>
+      <app-theme-switch> </app-theme-switch>
+    </div>
+  `,
   styleUrls: ['./header.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

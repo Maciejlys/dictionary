@@ -1,0 +1,13 @@
+svg {
+  transform: scale(0.75);
+  width: 100px;
+  height: 100px;
+}
+
+circle {
+  fill: var(--tertiary-color);
+}
+
+polygon {
+  fill: var(--secondary-color);
+}

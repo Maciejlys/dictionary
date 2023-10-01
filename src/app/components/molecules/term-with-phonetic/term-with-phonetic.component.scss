@@ -1,0 +1,19 @@
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.audio {
+  border-radius: 50%;
+  width: 50px;
+}
+
+.phonetic {
+  color: var(--secondary-color);
+}
+
+.word {
+  padding: 0;
+  margin: 0;
+}
