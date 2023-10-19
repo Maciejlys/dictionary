@@ -8,6 +8,8 @@ import { HeaderComponent } from './components/atoms/organisms/header/header.comp
 import { InputComponent } from './components/atoms/input/input.component';
 import { HttpClientModule } from '@angular/common/http';
 import { TermWithPhoneticComponent } from './components/molecules/term-with-phonetic/term-with-phonetic.component';
+import { MeaningsComponent } from './organisms/meanings/meanings.component';
+import { SynonymsComponent } from './components/molecules/synonyms/synonyms.component';
 
 @NgModule({
   declarations: [AppComponent],
@@ -18,6 +20,7 @@ import { TermWithPhoneticComponent } from './components/molecules/term-with-phon
     InputComponent,
     HttpClientModule,
     TermWithPhoneticComponent,
+    MeaningsComponent,
   ],
   providers: [],
   bootstrap: [AppComponent],

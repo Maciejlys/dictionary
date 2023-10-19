@@ -10,7 +10,7 @@ import { FormControl } from '@angular/forms';
 import { DictionaryService } from './services/dictionary.service';
 
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { Defnition } from './models/definition.model';
+import { WordDefninition } from './models/word-definition.model';
 import { Observable, Subject } from 'rxjs';
 
 @Component({
@@ -27,10 +27,11 @@ import { Observable, Subject } from 'rxjs';
           <app-term-with-phonetic
             [word]="definition.word"
             [phonetic]="definition.phonetics"
-          ></app-term-with-phonetic>
+          >
+          </app-term-with-phonetic>
+          <app-meanings [meanings]="definition.meanings"></app-meanings>
         </ng-container>
       </main>
-      <footer></footer>
     </div>
   `,
   styleUrls: ['./app.component.scss'],
@@ -40,7 +41,7 @@ export class AppComponent {
   dictionaryService = inject(DictionaryService);
   themeService = inject(ThemeService);
   searchControl = new FormControl();
-  definition$ = new Observable<Defnition>();
+  definition$ = new Observable<WordDefninition>();
 
   getDefinition() {
     this.definition$ = this.dictionaryService.getDefinition(

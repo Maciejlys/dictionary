@@ -1,0 +1,11 @@
+ul {
+  padding: 0 1rem;
+}
+
+li {
+  margin-bottom: 1rem;
+}
+
+ul li::marker {
+  color: var(--secondary-color);
+}

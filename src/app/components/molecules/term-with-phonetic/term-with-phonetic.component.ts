@@ -36,7 +36,8 @@ export class TermWithPhoneticComponent {
 
   get phoneticAudioSrc() {
     return this.phonetic.find(
-      (phonetic) => typeof phonetic.audio !== 'undefined'
+      (phonetic) =>
+        typeof phonetic.audio !== 'undefined' && phonetic.audio != ''
     )?.audio;
   }
 }

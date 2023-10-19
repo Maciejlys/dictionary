@@ -1,0 +1,16 @@
+.line-after:after {
+  content: '';
+  flex: 1;
+  margin-left: 1rem;
+  height: 1px;
+  background-color: var(--grey);
+}
+
+.line-after {
+  display: flex;
+  align-items: center;
+}
+
+.meaning {
+  color: var(--dark-grey);
+}
