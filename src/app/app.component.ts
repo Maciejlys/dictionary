@@ -43,6 +43,12 @@ export class AppComponent {
   searchControl = new FormControl();
   definition$ = new Observable<WordDefninition>();
 
+  // TODO remove
+  constructor() {
+    this.searchControl.setValue('keyboard');
+    this.getDefinition();
+  }
+
   getDefinition() {
     this.definition$ = this.dictionaryService.getDefinition(
       this.searchControl.value

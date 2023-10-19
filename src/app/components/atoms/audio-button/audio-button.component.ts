@@ -11,7 +11,13 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <svg (click)="play()">
+    <svg
+      (click)="play()"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 82 82"
+      height="82"
+      width="82"
+    >
       <circle cx="41" cy="41" r="37" stroke-width="1"></circle>
       <polygon fill="" stroke-width="1" points="32,25 32,58 60,42"></polygon>
     </svg>

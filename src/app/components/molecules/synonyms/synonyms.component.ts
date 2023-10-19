@@ -6,9 +6,10 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <p>
-      Synonyms <span *ngFor="let synonym of synonyms">{{ synonym }}</span>
-    </p>
+    <div class="flex">
+      <p>Synonyms</p>
+      <span *ngFor="let synonym of synonyms">{{ synonym }}</span>
+    </div>
   `,
   styleUrls: ['./synonyms.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

@@ -10,10 +10,11 @@ export class DictionaryService {
   constructor(private http: HttpClient) {}
 
   getDefinition(word: string) {
+    const domain = origin.includes('localhost')
+      ? 'http://localhost:8000'
+      : 'https://api.dictionaryapi.dev';
     return this.http
-      .get<Array<WordDefninition>>(
-        `http://localhost:8000/api/v2/entries/en/${word}`
-      )
+      .get<Array<WordDefninition>>(domain + '/api/v2/entries/en/' + word)
       .pipe(
         map((data) => data[0]),
         tap((x) => console.log(x))

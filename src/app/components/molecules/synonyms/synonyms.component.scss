@@ -3,7 +3,13 @@ p {
   margin-right: 1rem;
 }
 
-p span {
+.flex span {
   color: var(--secondary-color);
   font-weight: bold;
+}
+
+.flex {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
 }

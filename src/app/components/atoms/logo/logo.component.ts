@@ -13,15 +13,20 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],
   template: `
-    <svg viewbox="0 0 100 100" x="0" xmlns="http://www.w3.org/2000/svg" y="0">
+    <svg
+      width="50"
+      height="50"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <path
-        d="M50,25.4V79.9m0-54.5a34.06,34.06,0,0,0-18.9-5.3,34,34,0,0,0-18.8,5.3V79.9a34,34,0,0,1,18.8-5.3A34.06,34.06,0,0,1,50,79.9m0-54.5a34.06,34.06,0,0,1,18.9-5.3,34,34,0,0,1,18.8,5.3V79.9a34,34,0,0,0-18.8-5.3A34.06,34.06,0,0,0,50,79.9"
-        fill="none"
-        stroke="grey"
+        d="M4 19V6.2C4 5.0799 4 4.51984 4.21799 4.09202C4.40973 3.71569 4.71569 3.40973 5.09202 3.21799C5.51984 3 6.0799 3 7.2 3H16.8C17.9201 3 18.4802 3 18.908 3.21799C19.2843 3.40973 19.5903 3.71569 19.782 4.09202C20 4.51984 20 5.0799 20 6.2V17H6C4.89543 17 4 17.8954 4 19ZM4 19C4 20.1046 4.89543 21 6 21H20M9 7H15M9 11H15M19 17V21"
+        stroke="#000000"
+        stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
-        stroke-width="8"
-      ></path>
+      />
     </svg>
   `,
   styleUrls: ['./logo.component.scss'],
