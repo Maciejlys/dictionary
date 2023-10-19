@@ -1,6 +1,8 @@
 # Dictionary
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.2.
+Simple dictionary project found on [frontendmentor](https://www.frontendmentor.io/challenges/dictionary-web-app-h5wwnyuKFL) with mockups
+It's a shame that I work in angular and I didn't have any projects in it.
+No tests sadly as I finished this projects and want to move on to somethimg more ambitious
 
 ## Development server
 
