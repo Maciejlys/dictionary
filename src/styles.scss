@@ -40,4 +40,8 @@ body {
 
   --grey: rgba(211, 211, 211, 0.5);
   --dark-grey: rgba(180, 180, 180, 1);
+
+  @media (min-width: 1025px) {
+    font-size: 1.5rem;
+  }
 }

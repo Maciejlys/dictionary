@@ -2,6 +2,7 @@ import {
   ChangeDetectionStrategy,
   Component,
   OnInit,
+  effect,
   inject,
   signal,
 } from '@angular/core';
@@ -16,22 +17,26 @@ import { Observable, Subject } from 'rxjs';
 @Component({
   selector: 'app-root',
   template: `
-    <div class="app" [class]="themeService.theme()">
-      <app-header></app-header>
-      <main>
-        <app-input
-          (enter)="getDefinition()"
-          [control]="searchControl"
-        ></app-input>
-        <ng-container *ngIf="definition$ | async as definition">
-          <app-term-with-phonetic
-            [word]="definition.word"
-            [phonetic]="definition.phonetics"
-          >
-          </app-term-with-phonetic>
-          <app-meanings [meanings]="definition.meanings"></app-meanings>
-        </ng-container>
-      </main>
+    <div [class]="themeService.theme()">
+      <div class="app">
+        <app-header></app-header>
+        <main>
+          <app-input
+            (enter)="getDefinition()"
+            [control]="searchControl"
+          ></app-input>
+          <ng-container *ngIf="definition$ | async as definition">
+            <ng-container *ngIf="definition">
+              <app-term-with-phonetic
+                [word]="definition.word"
+                [phonetic]="definition.phonetics"
+              >
+              </app-term-with-phonetic>
+              <app-meanings [meanings]="definition.meanings"></app-meanings>
+            </ng-container>
+          </ng-container>
+        </main>
+      </div>
     </div>
   `,
   styleUrls: ['./app.component.scss'],
@@ -42,12 +47,6 @@ export class AppComponent {
   themeService = inject(ThemeService);
   searchControl = new FormControl();
   definition$ = new Observable<WordDefninition>();
-
-  // TODO remove
-  constructor() {
-    this.searchControl.setValue('keyboard');
-    this.getDefinition();
-  }
 
   getDefinition() {
     this.definition$ = this.dictionaryService.getDefinition(
