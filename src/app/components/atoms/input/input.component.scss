@@ -22,14 +22,14 @@
 }
 
 .input::placeholder {
-  color: #9e9ea7;
+  color: var(--color);
 }
 
 .input:focus,
 input:hover {
   outline: none;
   border-color: rgba(234, 76, 137, 0.4);
-  background-color: #fff;
+  background-color: var(--primary-color-soft);
   box-shadow: 0 0 0 4px rgb(234 76 137 / 10%);
 }
 
