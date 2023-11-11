@@ -10,6 +10,7 @@ p {
 
 .flex {
   display: flex;
-  gap: 1rem;
+  gap: 0 1rem;
   align-items: center;
+  flex-wrap: wrap;
 }
